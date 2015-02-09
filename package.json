@@ -1,0 +1,28 @@
+{
+  "name": "mobile-portfolio",
+  "version": "1.0.0",
+  "description": "Udacity Project 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3rcok/frontend-nanodegree-mobile-portfolio.git"
+  },
+  "author": "Lei Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3rcok/frontend-nanodegree-mobile-portfolio.git/issues"
+  },
+  "homepage": "https://github.com/3rcok/frontend-nanodegree-mobile-portfolio.git",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "^0.6.0"
+  }
+}
