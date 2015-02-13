@@ -34,12 +34,27 @@ module.exports = function(grunt) {
         watch: {
             files: ['css/*', 'js/*'],
             tasks: ['concat', 'cssmin', 'uglify']
+        },
+        htmlmin: {
+            options: {
+                cdata: true
+            },
+            dev: {
+                files: {
+                    'dist/index.html': 'index.html',
+                    'dist/project-2048.html': 'project-2048.html',
+                    'dist/project-mobile.html': 'project-mobile.html',
+                    'dist/project-webperf.html': 'project-webperf.html'
+                }
+            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     //grunt.registerTask('default', [ 'cssmin:css', 'uglify:js' ]);
@@ -47,5 +62,5 @@ module.exports = function(grunt) {
     // run these by typing "grunt test" at the command line
     grunt.registerTask('test', ['jshint']);
     // run these by tying "grunt" on the command line
-    grunt.registerTask('default', ['uglify', 'cssmin']);
+    grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin']);
 };
